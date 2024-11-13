@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+
+
+<main class="Tasks">
+
+
+    <section class="projectsList">
+      <div class="container">
+        <div class="grid grid--three">
+          {% for task in tasks %}
+          <div class="column">
+            <div class="card project">
+              
+              
+
+    
+                <div class="card__body">
+                  <h3 class="project__title">{{task.title}}</h3>
+                  <h3class="project_duedate">{{task.project.created}}</h3class></h3>
+              
+                </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'SingleTask' task.id %}">View</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{% url 'update_form' task.id %}">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="{% url 'delete_project' task.id %}">Delete</a>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+   
+
+          
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+{% endblock content %}

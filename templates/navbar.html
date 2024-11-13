@@ -1,0 +1,19 @@
+{% load static %}
+
+
+<header class="header"></header>
+    <div class="container container--narrow">
+      <a href="{% url 'alltasks' %}" class="header__logo">
+      </a>
+      <nav class="header__nav">
+        
+        <ul class="header__menu">
+
+          <li class="header__menuItem"><a href="{% url 'alltasks' %}" class="btn btn--sub">Tasks</a></li>
+
+          <li class="header__menuItem"><a href="{% url 'create_form' %}" class="btn btn--sub">Create Task</a></li>  
+
+        </ul>
+      </nav>
+    </div>
+  </header>

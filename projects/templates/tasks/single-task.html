@@ -1,0 +1,54 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+
+
+
+
+{% for tag in tags %}
+    <span style="border:1px solid gray">{{tag}}</span>
+{% endfor %}
+
+
+<main class="singleProject my-md"></main>
+    <div class="container">
+      <div class="layout">
+        <div class="column column--1of3">
+        </div>
+        <div class="column column--2of3">
+          <h2 class="singleProject__title">{{project.title}}</h2>
+          <h3 class="singleProject__subtitle">Task Description</h3>
+          
+          <div class="singleProject__info">
+            {{project.description}}
+
+          </div>
+          
+          <h4 class="singleProject__subtitle">Due Date</h4>
+
+          <div class="singleProject__info">
+            {{project.due_date}}
+          </div>
+
+          <h5 class="singleProject__subtitle">Subject</h5>
+          <div class="singleProject__info">
+            {{project.subject}}
+          </div>
+
+          <h6 class="singleProject__subtitle">Importance</h6>
+          <div class="singleProject__info">
+            {{project.importance}}
+
+          
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+{% endblock content %}
